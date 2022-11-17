@@ -1,20 +1,23 @@
 <html>
 <head>
 	<title>ITCS ERASMO DA ROTTERDAM</title>
+	<link rel="stylesheet" href="stile.css"/>
 </head>
 <body>
-	<h2>Validazione di un Form - Esempio</h2>
-<p>* = campi obbligatori da compilare</p>
+	<h2>VALIDAZIONE FORM</h2>
+	<p>* = Campi obbligatori da compilare</p>
+	<div class="sezione-login">
 	<form name="frmLogin" action="check.php" method="POST">
-		Nome: <input type="text" name="nome"><br>
-		Cognome: <input type="text" name="cognome"><br>
-		Data di nascita: <input type="date" name="data"><br>
-		Nickname: <input type="text" name="nickname"><br>
-		Email: <input type="text" name="email"><br>
-		Cellulare: <input type="text" name="cellulare"><br>
-		Password: <input type="password" name="password"><br>
+		NOME*: <input type="text" name="nome"><br><br>
+		COGNOME*: <input type="text" name="cognome"><br><br>
+		DATA*: <input type="date" name="data"><br><br>
+	    NICKNAME*: <input type="text" name="nickname"><br><br>
+		EMAIL*: <input type="text" name="email"><br><br>
+	    CELLULLARE: <input type="text" name="cellulare"><br><br>
+	    PASSWORD*: <input type="password" name="password"><br><br>
 		<input type="submit" value="Submit">
-	</form><hr/>
+	</form>
+	</div>
 	
 </body>
 </html>
