@@ -1,0 +1,28 @@
+ body{
+	background: -webkit-linear-gradient(left, #002EFF, #00FFE0);
+ }
+ 
+ h2{
+	color: white;
+	font-family: Sans-serif;
+ }
+ 
+ p{
+	color: white;
+	font-family: Sans-serif;
+ }
+ 
+ form{
+	text-align: center;
+	font-family: Sans-serif;
+	color: black;
+ }
+ 
+.sezione-login{
+	background: #00FFE0;
+	padding: 30px;
+	max-width: 420px;
+	height: 280px;
+	
+	
+ }
