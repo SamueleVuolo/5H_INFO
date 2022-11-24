@@ -1,14 +1,22 @@
  body{
-	background: -webkit-linear-gradient(left, #002EFF, #00FFE0);
+	background: grey;
+ }
+	
+ h2{
+	text-align: center;
+	color: white;
+	font-family: Sans-serif;
  }
  
- h2{
-	color: white;
+ h3{
+	text-align: center;
+	color: black;
 	font-family: Sans-serif;
  }
  
  p{
 	color: white;
+	text-align: center;
 	font-family: Sans-serif;
  }
  
@@ -19,10 +27,36 @@
  }
  
 .sezione-login{
-	background: #00FFE0;
+	border: 7px solid pink;
+	margin: auto;
+	background: white;
 	padding: 30px;
-	max-width: 420px;
-	height: 280px;
+	max-width: 700px;
+	height: 720px;
 	
 	
  }
+ 
+input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 7px;
+  box-sizing: border-box;
+}
+
+.tasto-submit{
+	font-family: Sans-serif;
+	margin: auto;
+	max-width: 50%;
+}
+
+.dati-inseriti{
+	border: 7px solid pink;
+	font-family: Sans-serif;
+	margin: auto;
+	background: white;
+	text-align: center;
+	padding: 15px;
+	max-width: 320px;
+	height: 220px;
+}
