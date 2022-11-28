@@ -1,22 +1,16 @@
- body{
-	background: grey;
+body{
+	background: pink;
  }
 	
  h2{
 	text-align: center;
-	color: white;
+	color: black;
 	font-family: Sans-serif;
  }
  
  h3{
 	text-align: center;
 	color: black;
-	font-family: Sans-serif;
- }
- 
- p{
-	color: white;
-	text-align: center;
 	font-family: Sans-serif;
  }
  
@@ -27,14 +21,12 @@
  }
  
 .sezione-login{
-	border: 7px solid pink;
+	border: 7px solid black;
 	margin: auto;
 	background: white;
 	padding: 30px;
 	max-width: 700px;
-	height: 720px;
-	
-	
+	height: 720px
  }
  
 input{
@@ -51,12 +43,12 @@ input{
 }
 
 .dati-inseriti{
-	border: 7px solid pink;
+	border: 7px solid black;
 	font-family: Sans-serif;
 	margin: auto;
 	background: white;
 	text-align: center;
 	padding: 15px;
-	max-width: 320px;
+	max-width: 730px;
 	height: 220px;
 }
