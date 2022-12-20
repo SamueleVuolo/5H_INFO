@@ -1,22 +1,25 @@
 <html>
 <head>
 <title>ITCS Erasmo da Rotterdam</title>
+<link rel="stylesheet" href="stile.css?ts=<?=time()?>&quot">
 </head>
 <body>
 <?php
 include "functions.php";
 
 session_start(); //inizio della sessione
-	
-if(isset($_SESSION["username"] || empty($_SESSION["username"])))
+if(!isset($_SESSION["username"]) && empty($_SESSION["username"]))
 {
-	echo "Benvenuto nel sito!";
-	header("Location: PagRis.php");
-	session_destroy();
+	echo "<h1>Effettuare prima il login.</h1>";?>
+	<a href="Login.php"><h1>Effettua il login</h1></a>
+<?php
 }
 else
 {
-	
+	echo "Benvenuto nel sito!";
+?>
+	<a href="Logout.php"><h2>Esci</h2></a>
+<?php
 }
 ?>
 </body>
