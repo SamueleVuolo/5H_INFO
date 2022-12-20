@@ -1,6 +1,7 @@
 <html>
 <head>
-	<title>ITCS ERASMO DA ROTTERDAM</title>
+	<title>Accedi - ITCS ERASMO</title>
+	<link rel="stylesheet" href="stile.css?ts=<?=time()?>&quot">
 </head>
 
 <body>
@@ -21,12 +22,14 @@
 	}
 }	else {
 ?>
-
+	<div class="sezione-login">
 	<form name="frmLogin" action="PagRis.php" method="POST">
 		User name: <input type="text" name="username"><br>
 		Password: <input type="password" name="password"><br>
 		<input type="submit" value="Submit">
-	</form><hr/>
+	</form>
+	</div>
+	<hr/>
 	
 <?php
 }
