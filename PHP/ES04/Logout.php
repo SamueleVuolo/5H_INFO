@@ -1,4 +1,3 @@
-
 <html>
 <head>
 	<title>Esci - ITCS ERASMO</title>
@@ -6,6 +5,7 @@
 </head>
 <body>
 <?php 
+	session_start();
 	session_destroy();
 	echo "Logout avvenuto. Arrivederci";
 ?>
