@@ -7,7 +7,7 @@
 <?php 
 	session_start();
 	session_destroy();
-	echo "Logout avvenuto. Arrivederci";
+	echo "<h2>Logout avvenuto. Arrivederci</h2>";
 ?>
 <hr/>
 <a href="Login.php"><h2>Accedi di nuovo</h2></a>
