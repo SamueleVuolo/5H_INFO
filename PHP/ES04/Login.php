@@ -7,13 +7,16 @@
 <body>
 <?php
 	session_start();
-	if(isset($_SESSION["username"])) {
-		$username=$_SESSION["username"];
-		$password=$_SESSION["password"];
+	if(isset($_POST["username"])) {
+		$username=$_POST["username"];
+		$password=$_POST["password"];
 		if($username!="admin" || $password!="pswd")
 			echo "<h2>Credenziali errate.</h2>";
-		else
+		else{
+			$_SESSION["username"]=$_POST["username"];
+			$_SESSION["password"]=$_POST["password"];
 			header("Location: PagRis.php");
+		}
 	}
 if(!isset($_SESSION["username"]))
 {?>
