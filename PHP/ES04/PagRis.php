@@ -5,8 +5,6 @@
 </head>
 <body>
 <?php
-include "functions.php";
-
 session_start(); //inizio della sessione
 if(!isset($_SESSION["username"]) && empty($_SESSION["username"]))
 {
@@ -16,7 +14,7 @@ if(!isset($_SESSION["username"]) && empty($_SESSION["username"]))
 }
 else
 {
-	echo "Benvenuto nel sito!";
+	echo "<h1>Benvenuto nel sito!</h1>";
 ?>
 	<a href="Logout.php"><h2>Esci</h2></a>
 <?php
