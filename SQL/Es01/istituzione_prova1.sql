@@ -9,8 +9,13 @@ CREATE TABLE scuola(
 //creazione tabella studenti
 CREATE TABLE studenti(
     matricola CHAR(10),
-    cognome CHAR(15) NOT NULL,
-    codice_scuola INT REFERENCES scuola(codice)
+    nome CHAR(15) NOT NULL,
+    cognome CHAR(20) NOT NULL,
+    data_nascita DATE NOT NULL,
+    codice_scuola INT NOT NULL,
+    FOREIGN KEY(codice_scuola) REFERENCES scuola(codice)
+    	ON UPDATE CASCADE
+   	
 );
 
 //aggiungo un campo in studenti
