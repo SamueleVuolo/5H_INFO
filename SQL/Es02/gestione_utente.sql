@@ -12,9 +12,9 @@ PRIMARY KEY (id)
 //inserimento dei campi
 INSERT 
 INTO utente(id, username, pswd)
-VALUES (NULL, 'Billy', 'provetta');
+VALUES (NULL, 'Billy', 'blokka');
 
 //modifico tabella utente
 UPDATE utente
-SET pswd='blokka'
+SET email='billy.blokka@gmail.com'
 WHERE id=100;
