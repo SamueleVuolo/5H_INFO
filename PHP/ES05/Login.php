@@ -2,14 +2,41 @@
 require 'function.php';
 
 session_start(); // Avvia la sessione php.
-//$_SESSION['pag_count']++; echo $_SESSION['pag_count'];
 
-$username = (isset($_POST['username'])) ? $_POST['username'] : "";
-$password = (isset($_POST['password'])) ? $_POST['password'] : "";
+define('DB_SERVER', 'localhost');
+define('DB_NAME', 'gestione_utenti');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
+?>
+<?php
 
-
-list($retval,$errmsg)=login($username, $password);
-if($retval) {header("location: PagRis.php"); die();} 
+if(!isset($_SESSION['login']))
+{
+	//il login non è ancora verificato
+	if(isset($_POST['Login'])
+	{
+		//verifichiamo che username e password sono presenti nel db
+		//connessione al database
+		connessionedb($_POST['username'], $_POST['password']);
+		
+		//interrogazione
+		//SELECT * FROM Utente WHERE username='' and password=''
+		$stmt = $pdo->prepare("SELECT * FROM utente WHERE username = :username AND password = :password");
+		
+		//controllo del record restituito
+	}
+	else
+	{
+		//E' la prima volta che viene caricata la pagina
+		//Visualizzo il form
+	}
+}
+else
+{
+	//L'utente ha già fatto il login
+	//Faccio redirect a riservata.php
+	//oppure visualizzo il link a riservata.php
+}
 ?>
 
 <html>
