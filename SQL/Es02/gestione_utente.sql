@@ -18,3 +18,9 @@ VALUES (NULL, 'Billy', 'blokka');
 UPDATE utente
 SET email='billy.blokka@gmail.com'
 WHERE id=100;
+
+//aggiungo attributi
+ALTER TABLE utente ADD COLUMN(
+	mail CHAR(20) NOT NULL,
+    nascita DATE NOT NULL
+);
