@@ -21,6 +21,56 @@ WHERE id=100;
 
 //aggiungo attributi
 ALTER TABLE utente ADD COLUMN(
-	mail CHAR(20) NOT NULL,
-    nascita DATE NOT NULL
+    mail CHAR(20),
+    nascita DATE
 );
+
+//avvaloro i nuovi attributi
+UPDATE utente
+SET mail='bellofigo@gmail.com'
+WHERE id='100'
+
+UPDATE utente
+SET nascita='2004-06-29'
+WHERE id='100'
+
+
+
+UPDATE utente
+SET mail='framma76@gmail.com'
+WHERE id='101';
+
+UPDATE utente
+SET nascita='1976-10-16'
+WHERE id='101'
+
+
+
+UPDATE utente
+SET mail='forza.maggica22@gmail.com'
+WHERE id='102';
+
+UPDATE utente
+SET nascita='2000-04-10'
+WHERE id='102'
+
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
