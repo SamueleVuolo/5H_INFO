@@ -35,7 +35,6 @@ SET nascita='2004-06-29'
 WHERE id='100'
 
 
-
 UPDATE utente
 SET mail='framma76@gmail.com'
 WHERE id='101';
@@ -43,7 +42,6 @@ WHERE id='101';
 UPDATE utente
 SET nascita='1976-10-16'
 WHERE id='101'
-
 
 
 UPDATE utente
@@ -54,7 +52,19 @@ UPDATE utente
 SET nascita='2000-04-10'
 WHERE id='102'
 
+//aggiungo attributi
+ALTER TABLE utente ADD COLUMN(
+    nome CHAR(35),
+    cognome CHAR(35)
+);
+
+
+//avvaloro i campi con UPDATE
+....
+
+
 //
+
 
 
 
