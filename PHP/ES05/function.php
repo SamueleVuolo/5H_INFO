@@ -2,10 +2,10 @@
 
 function login() {
 	
-	define('DB_SERVER', 'localhost');
+	/*define('DB_SERVER', 'localhost');
 	define('DB_NAME', 'gestione_utenti');
 	define('DB_USER', 'root');
-	define('DB_PASSWORD', '');
+	define('DB_PASSWORD', '');*/
 	
 	//passo variabili del login con POST
 	$username=$_POST['username'];
