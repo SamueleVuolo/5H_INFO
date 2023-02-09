@@ -37,6 +37,14 @@ SELECT * FROM studenti WHERE matricola='58';
 
 
 
+//provare query LEFT JOIN
+SELECT st.nome AS nomestudenti, st.classe, sc.nome_scuola
+FROM studenti AS st LEFT JOIN scuola AS sc
+ON st.codice_scuola=sc.codice
+
+SELECT st.nome AS nomestudenti, st.classe, sc.nome_scuola
+FROM scuola AS sc LEFT JOIN studenti AS st
+ON st.codice_scuola=sc.codice
 
 
 
