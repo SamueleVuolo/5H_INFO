@@ -34,5 +34,21 @@ function login() {
 
 /*function login($username, $password) {}*/
 
+function signup()
+{
+	$nome=$_POST['nome']
+	$cognome=$_POST['cognome']
+	$email=$_POST['email']
+	$nascita=$_POST['nascita']
+	$username=$_POST['username']
+	$pswd=$_POST['password']
+	
+	//query per database
+	$pdo = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
+	
+	$regis = "INSERT INTO utente(id, nome, cognome, nascita, mail, username, pswd) VALUES(NULL, '$nome','$cognome','$email','$nascita','$username','$pswd')";
+	
+}
+
 
 
