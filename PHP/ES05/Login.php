@@ -38,4 +38,3 @@ else
 	echo "<a href='Logout.php'>Esci</a><br>";
 }
 ?>
-
