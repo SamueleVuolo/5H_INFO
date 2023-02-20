@@ -5,7 +5,7 @@ require 'function.php';
 
 <html>
 <head>
-<title>Login</titlae>
+<title>Registrati</title>
 </head>
 
 <body>
