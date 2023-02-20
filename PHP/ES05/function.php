@@ -7,7 +7,7 @@ function login()
 	$pswd=$_POST['password'];
 	
 	//query per database
-	$pdo = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
+	$pdo = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);	
 	
 	//interogazione database
 	$inter = "SELECT * FROM utente WHERE username = '$username' AND pswd = '$pswd'";
@@ -17,7 +17,7 @@ function login()
 	if($ris->rowCount()>0){
 		//se vero
 		$_SESSION['login']=true;
-		echo "Benvenuto nella Homepage";
+		echo "Benvenuto nella Homepage<br>";
 		echo "<a href='PagRis.php'>Pagina Riservata</a>";
 	}
 	else
