@@ -2,6 +2,11 @@
 session_start(); // Avvia la sessione php.
 require 'function.php';
 ?>
+<html>
+<head>
+<title>Login</title>
+</head>
+<body> 
 <?php
 //definizione del db
 define('DB_SERVER', 'localhost');
