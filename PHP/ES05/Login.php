@@ -10,7 +10,7 @@ require 'function.php';
 <?php
 //definizione del db
 define('DB_SERVER', 'localhost');
-define('DB_NAME', 'gestione_utente');
+define('DB_NAME', 'gestione_utenti');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 
@@ -27,6 +27,7 @@ if(!isset($_SESSION['login']))
 			<input type="submit" name="Login" />
 		</form>
 		<p>Non sei registrato? <a href="Registrazione.php"> Crea un account</a>.</p>
+		<p>Password dimenticata? <a href="PassReset.php"> Cambia Password</a>.</p><br/>
 <?php
 		
 	}else
