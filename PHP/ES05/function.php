@@ -54,4 +54,7 @@ function signup()
 	//termino connessione al db
 	$pdo=null;
 }
+
+
+function (){}
 ?>
