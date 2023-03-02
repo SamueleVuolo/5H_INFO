@@ -52,6 +52,10 @@ SELECT s1.nome AS nome, s1.cognome AS cognome, s2.cognome AS rappresentante
 FROM studenti AS s1, studenti AS s2
 WHERE s1.codice_rapp = s2.matricola
 
+//LEFT JOIN
+SELECT s.nome AS nome, s.cognome AS cognome, sc.nome_scuola AS scuola
+FROM studenti AS s LEFT JOIN scuola AS sc
+ON s.codice_scuola = sc.codice
 
 
 
