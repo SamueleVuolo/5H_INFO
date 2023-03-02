@@ -57,6 +57,10 @@ SELECT s.nome AS nome, s.cognome AS cognome, sc.nome_scuola AS scuola
 FROM studenti AS s LEFT JOIN scuola AS sc
 ON s.codice_scuola = sc.codice
 
+//RIGHT JOIN
+SELECT s.nome AS nome, s.cognome AS cognome, sc.nome_scuola AS scuola
+FROM studenti AS s RIGHT JOIN scuola AS sc
+ON s.codice_scuola = sc.codice
 
 
 
