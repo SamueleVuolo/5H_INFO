@@ -47,8 +47,10 @@ FROM scuola AS sc LEFT JOIN studenti AS st
 ON st.codice_scuola=sc.codice
 
 
-
-
+//SELF JOIN
+SELECT s1.nome AS nome, s1.cognome AS cognome, s2.cognome AS rappresentante
+FROM studenti AS s1, studenti AS s2
+WHERE s1.codice_rapp = s2.matricola
 
 
 
