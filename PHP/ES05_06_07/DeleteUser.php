@@ -13,7 +13,7 @@ require 'function.php';
 		
 //definizioni info per il database
 define('DB_SERVER', 'localhost');
-define('DB_NAME', 'gestione_utente');
+define('DB_NAME', 'gestione_utenti');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 		
