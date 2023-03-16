@@ -94,4 +94,22 @@ function resetpass()
 	$pdo=null;
 	
 }
+
+function delaccount(){
+	$email = $_POST['email'];
+
+    $pdo = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
+    $deluser = "DELETE FROM utente WHERE mail='$email'";
+		
+	//controllo se la query è andata a buon fine
+    if($pdo->query($deluser)==true)
+	{
+        echo "Eliminazione avvenuta correttamente";
+    }else
+    echo "Impossibile eliminare l'account";
+	
+	//chiudo la connessione al database
+	$pdo=null;
+	session_destroy();
+}
 ?>
