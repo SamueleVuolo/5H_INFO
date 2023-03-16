@@ -55,6 +55,43 @@ function signup()
 	$pdo=null;
 }
 
-
-function (){}
+function resetpass()
+{
+	//passo le variabili con POST
+	$username = $_POST['username'];
+    $pswd = $_POST['password'];
+	$email = $_POST['email'];
+	
+	//query per database
+	$pdo = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
+	
+	//interogazione database
+	$inter = "SELECT * FROM utente WHERE username = '$username' AND mail = '$email'";
+	//risultato interrogazione
+	$ris = $pdo->query($inter);
+	if($ris->rowCount()>0)
+	{
+		//se vero
+		$_SESSION['reset']=true;
+			
+		$pdo = new PDO("mysql:host=".DB_SERVER.";dbname=".DB_NAME, DB_USER, DB_PASSWORD);
+		$pwreset = "UPDATE utente SET pswd='$pswd' WHERE username='$username'";
+		//controllo se la query è andata a buon fine
+		if($pdo->query($pwreset)==true)
+		{
+			echo "Password aggiornata ";
+		}else
+		echo "Impossibile aggiornare la password ";
+	}
+	else
+	{
+		//se falso
+		$_SESSION['reset']=false;
+		echo "Credenziali errate! <a href='PassReset.php'> Cambia Password</a><br>";
+	}
+	
+	//termino connessione al db
+	$pdo=null;
+	
+}
 ?>
