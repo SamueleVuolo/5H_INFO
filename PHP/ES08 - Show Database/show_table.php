@@ -3,11 +3,13 @@
 <title>ITCS Erasmo da Rotterdam</title>
 </head>
 <body>
+<table border="1" cellspacing="3" cellpadding="2">
 <?php
 
 	//definizioni del db
+	session_start();
 	define('DB_SERVER', 'localhost');
-	define('DB_NAME', 'Utenti');
+	define('DB_NAME', 'utenti');
 	define('DB_USER', 'root');
 	define('DB_PASSWORD', '');
 	  
@@ -17,10 +19,13 @@
 	//query per la visualizzazione della tabella
 	$query = "SELECT * FROM utente";
 	$ris = $pdo->query($query);
-	foreach ($ris as $row) {
-        print $row["nome"] . " " . $row["cognome"] ."<br/>";
-    }
-  
+	$qs="Niente";
+	foreach($ris as $riga){
+		echo "<tr>";
+		echo "<td align=\"center\">"; 
+		print $riga["id"] ."<td align=\"center\">". $riga["nome"] ."<td align=\"center\">". $riga["cognome"] . "<td align=\"center\">" . $riga["nascita"] . "</td>";
+		echo "</tr>";
+	}
 ?>
 </body>
 </html>
